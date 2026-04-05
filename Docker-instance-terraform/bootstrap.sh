@@ -10,3 +10,5 @@ dnf -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker
 systemctl enable --now docker
 docker run hello-world
 
+usermod -aG docker $USER
+
