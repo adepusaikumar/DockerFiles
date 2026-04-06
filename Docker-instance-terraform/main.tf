@@ -14,3 +14,7 @@ resource "aws_instance" "docker_instance" {
   }
   vpc_security_group_ids = ["sg-05f6d4e8dbe538e8e"]
 }
+
+output "instance_public_ip" {
+  value = aws_instance.docker_instance.public_ip
+}
