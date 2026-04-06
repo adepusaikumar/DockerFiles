@@ -1,8 +1,7 @@
 ARG version
 FROM almalinux:${version:-8}
-ARG COURSE="Docker" \
-    TRAINER="Sivakumar" \
-    DURATION="10HRS" \
-    AUTHOR="joindevops"
-RUN echo "Trainer is: ${TRAINER}, version is: ${version}"
+ARG AUTHOR="Saikumar" \
+    PROJECT="ARG Dockerfile" \
+    ENVIRONMENT="Development" \
+RUN echo "Author is: ${AUTHOR}, project is: ${PROJECT}, environment is: ${ENVIRONMENT}"
 CMD ["sleep", "200"]
