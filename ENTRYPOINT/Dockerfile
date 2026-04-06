@@ -1,5 +1,8 @@
 FROM almalinux:9
-#CMD ["ping","google.com"]
-#ENTRYPOINT ["ping","google.com"]
+
+# You MUST install iputils to get the 'ping' command
+RUN dnf install iputils -y
+
+# Keep your ENTRYPOINT and CMD exactly as they were
+ENTRYPOINT ["ping"]
 CMD ["google.com"]
-ENTRYPOINT ["ping"] # we can override the CMD but not the ENTRYPOINT, here the CMD is the argument provides default value to ENTRYPOINT
